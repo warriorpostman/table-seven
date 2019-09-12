@@ -1,0 +1,10 @@
+.comparison {
+  display: flex;
+}
+.comparison > div {
+  flex: 1;
+}
+
+.comparison > div > ul {
+  margin: 0rem 5rem 2rem 5rem;
+}

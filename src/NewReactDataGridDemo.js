@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDataGrid from 'react-data-grid';
+import Comparison from './Comparison';
+
+// import 'bootstrap/dist/css/bootstrap.css';
 
 import makeData from './makeData';
 
@@ -12,11 +15,22 @@ const NewReactDataGridDemo = () => {
     .map(c => ({ ...c, key: c.accessor}));
 
   return (
-    <ReactDataGrid 
-      columns={reactDataGridColumns}
-      rowsCount={data.length}
-      rowGetter={i => data[i]}
-    />
+    <div>
+      <Comparison
+        pros={[
+        "Has Excel like properties",
+        ]}
+        cons={[
+        "Uses divs for rows/cells",
+        "Requires bootstrap"
+        ]}
+      />
+      <ReactDataGrid 
+        columns={reactDataGridColumns}
+        rowsCount={data.length}
+        rowGetter={i => data[i]}
+      />
+    </div>
   );
 };
 

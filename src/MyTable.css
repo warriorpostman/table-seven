@@ -2,6 +2,10 @@
   /* border: 1px solid black; */
 /* } */
 
-/* .my-table > tbody > td, th { */
-/*   /1* border: 1px solid black; *1/ */
-/* } */
+.my-table > tbody > tr, td {
+  border: 1px solid black;
+}
+
+.my-table > tbody > td, th {
+  border: 1px solid black;
+}
