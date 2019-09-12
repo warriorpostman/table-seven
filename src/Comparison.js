@@ -7,13 +7,13 @@ const Comparison = ({ pros, cons }) => {
       <div>
         <h3>PROS</h3>
         <ul>
-          {pros.map(pro => <li>{pro}</li>)}
+          {pros.map(pro => <li key={pro.replace(' ', '-')}>{pro}</li>)}
         </ul>
       </div>
       <div>
         <h3>CONS</h3>
         <ul>
-          {cons.map(con => <li>{con}</li>)}
+          {cons.map(con => <li key={con.replace(' ', '-')}>{con}</li>)}
         </ul>
       </div>
     </div>
