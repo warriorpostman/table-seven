@@ -1,7 +1,7 @@
-.my-table {
-  border: 1px solid black;
-}
+/* .my-table { */
+  /* border: 1px solid black; */
+/* } */
 
-td, th {
-  border: 1px solid black;
-}
+/* .my-table > tbody > td, th { */
+/*   /1* border: 1px solid black; *1/ */
+/* } */

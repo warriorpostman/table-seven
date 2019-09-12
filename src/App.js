@@ -1,81 +1,35 @@
+import React, { useState } from 'react';
+import NewReactTableDemo from './NewReactTableDemo';
+import NewReactDataGridDemo from './NewReactDataGridDemo';
 import './App.css';
-import React from 'react';
-import Table from './MyTable';
-import makeData from './makeData';
 
 function App() {
-	const simpleColumns = React.useMemo(() => [
-              {
-                Header: 'First Name',
-                accessor: 'firstName',
-              },
-              {
-                Header: 'Last Name',
-                accessor: 'lastName',
-              },
-              {
-                Header: 'Age',
-                accessor: 'age',
-              },
-              {
-                Header: 'Visits',
-                accessor: 'visits',
-              },
-              {
-                Header: 'Status',
-                accessor: 'status',
-              },
-              {
-                Header: 'Profile Progress',
-                accessor: 'progress',
-              },
-        ],
-        []
-      ); 
-	const nestedColumns = React.useMemo(() => [
-          {
-            Header: 'Name',
-            columns: [
-              {
-                Header: 'First Name',
-                accessor: 'firstName',
-              },
-              {
-                Header: 'Last Name',
-                accessor: 'lastName',
-              },
-            ],
-          },
-          {
-            Header: 'Info',
-            columns: [
-              {
-                Header: 'Age',
-                accessor: 'age',
-              },
-              {
-                Header: 'Visits',
-                accessor: 'visits',
-              },
-              {
-                Header: 'Status',
-                accessor: 'status',
-              },
-              {
-                Header: 'Profile Progress',
-                accessor: 'progress',
-              },
-            ],
-          },
-        ],
-        []
-      ); 
-  const data = React.useMemo(() => makeData(15), [])
-  console.log(data);
+  const [gridType, setGridType] = useState('react-table');
 
   return (
     <div className="App">
-      <Table columns={simpleColumns} data={data} />
+      <input type="radio" name="gridType" 
+        value="react-data-grid"
+        checked={gridType === 'react-data-grid'}
+        onClick={(e) => setGridType(e.target.value)}
+      />
+      <label>react-data-grid</label>
+      <input type="radio" name="gridType" 
+        value="react-table"
+        checked={gridType === 'react-table'}
+        onClick={(e) => setGridType(e.target.value)}
+      />
+      <label>react-table</label>
+      <div style={{ 
+        margin: '3rem' 
+      }}>
+        { gridType === 'react-table' &&
+        <NewReactDataGridDemo />
+        }
+        { gridType === 'react-data-grid' &&
+        <NewReactTableDemo />
+        }
+      </div>
     </div>
   );
 }
