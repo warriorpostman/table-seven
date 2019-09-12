@@ -18,7 +18,8 @@ const NewReactDataGridDemo = () => {
     <div>
       <Comparison
         pros={[
-        "Has Excel like properties",
+        "Built for inline-editing and selection (Excel-like features)",
+        "Can navigate by keyboard by default (focus on cell, etc)",
         ]}
         cons={[
         "Uses divs for rows/cells",

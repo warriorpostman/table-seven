@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NewReactTableDemo from './NewReactTableDemo';
-import NewReactDataGridDemo from './NewReactDataGridDemo';
+import ReactTableDemo from './ReactTableDemo';
+import ReactDataGridDemo from './ReactDataGridDemo';
 import './App.css';
 
 function App() {
@@ -23,11 +23,11 @@ function App() {
       <div style={{ 
         margin: '3rem' 
       }}>
-        { gridType === 'react-table' &&
-        <NewReactDataGridDemo />
-        }
         { gridType === 'react-data-grid' &&
-        <NewReactTableDemo />
+        <ReactDataGridDemo />
+        }
+        { gridType === 'react-table' &&
+        <ReactTableDemo />
         }
       </div>
     </div>

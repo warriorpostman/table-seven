@@ -13,7 +13,7 @@ const Comparison = ({ pros, cons }) => {
       <div>
         <h3>CONS</h3>
         <ul>
-          {cons.map(pro => <li>{pro}</li>)}
+          {cons.map(con => <li>{con}</li>)}
         </ul>
       </div>
     </div>
