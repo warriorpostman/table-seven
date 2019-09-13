@@ -10,24 +10,36 @@ function App() {
 
   return (
     <div className="App">
-      <input type="radio" name="gridType" 
+      <input 
+        type="radio" 
+        name="gridType" 
+        id="ag-grid-radio"
         value="ag-grid"
         checked={gridType === 'ag-grid'}
         onClick={(e) => setGridType(e.target.value)}
       />
-      <label>Ag-grid-(react)</label>
+      <label 
+        htmlFor="ag-grid-radio"
+      >Ag-grid-(react)</label>
       <input type="radio" name="gridType" 
+        id="react-data-grid-radio"
         value="react-data-grid"
         checked={gridType === 'react-data-grid'}
         onClick={(e) => setGridType(e.target.value)}
       />
-      <label>react-data-grid</label>
-      <input type="radio" name="gridType" 
+      <label
+        htmlFor="react-data-grid-radio"
+      >react-data-grid</label>
+      <input 
+        id="react-table-radio"
+        type="radio" name="gridType" 
         value="react-table"
         checked={gridType === 'react-table'}
         onClick={(e) => setGridType(e.target.value)}
       />
-      <label>react-table</label>
+      <label
+        htmlFor="react-table-radio"
+      >react-table</label>
       <div style={{ 
         margin: '3rem' 
       }}>
