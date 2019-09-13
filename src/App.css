@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  padding: 1rem;
 }
 
-/* .react-grid-Row { */
-/*   contain: none !important; */
-/* } */
+input[type="radio"] + label {
+  font-size: 1.3rem;
+  padding: .25rem;
+}
 
+input[type="radio"]:checked + label {
+  border: solid 1px green;
+  border-radius: 5px;
+}
 
