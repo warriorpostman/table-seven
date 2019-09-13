@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import ReactDataGrid from 'react-data-grid';
-import Comparison from './Comparison';
-
 // import 'bootstrap/dist/css/bootstrap.css';
 
 import makeData from './makeData';

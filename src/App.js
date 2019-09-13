@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactTableDemo from './ReactTableDemo';
 import ReactDataGridDemo from './ReactDataGridDemo';
 import AgGridDemo from './AgGridDemo';
+import Comparison from './Comparison';
 
 import './App.css';
 
