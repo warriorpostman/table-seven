@@ -11,7 +11,11 @@ import simpleColumns from './demoData';
 const AgGridDemo = () => {
   const data = React.useMemo(() => makeData(30), []);
   console.log(data);
-  const agGridColumns = simpleColumns.map(col => ({ headerName: col.Header, field: col.accessor }));
+  const agGridColumns = simpleColumns.map(col => ({ 
+    headerName: col.Header, 
+    field: col.accessor,
+    sortable: col.Header === 'Age' || col.Header === 'Last Name'
+  }));
   console.log(agGridColumns);
 
   return (
