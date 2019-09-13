@@ -8,3 +8,8 @@
 .comparison > div > ul {
   margin: 0rem 5rem 2rem 5rem;
 }
+
+.comparison > div > ul > li {
+  float: left;
+  margin: 0rem 5rem 2rem 5rem;
+}
