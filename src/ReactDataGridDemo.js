@@ -32,27 +32,15 @@ const NewReactDataGridDemo = () => {
   };
 
   return (
-    <div>
-      <Comparison
-        pros={[
-        "Built for inline-editing and selection (Excel-like features)",
-        "Can navigate by keyboard by default (focus on cell, etc)",
-        ]}
-        cons={[
-        "Uses divs for rows/cells",
-        "Requires bootstrap"
-        ]}
-      />
-      <ReactDataGrid 
-        columns={reactDataGridColumns}
-        rowsCount={rows.length}
-        rowGetter={i => rows[i]}
-        onGridSort={(sortColumn, sortDirection) =>
-          setRows(sortRows(data, sortColumn, sortDirection))
-        }
+    <ReactDataGrid 
+      columns={reactDataGridColumns}
+      rowsCount={rows.length}
+      rowGetter={i => rows[i]}
+      onGridSort={(sortColumn, sortDirection) =>
+        setRows(sortRows(data, sortColumn, sortDirection))
+      }
 
-      />
-    </div>
+    />
   );
 };
 

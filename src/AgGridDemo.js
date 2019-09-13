@@ -19,31 +19,18 @@ const AgGridDemo = () => {
   console.log(agGridColumns);
 
   return (
-    <div>
-      <Comparison
-        pros={[
-        "Not sure yet....good docs? Nice website?",
-        ]}
-        cons={[
-        "Uses divs for rows/cells",
-        "Lots of HTML gets generateed...like A LOT.",
-        "It's not a pure React solution.",
-        "Free vs paid version.  Not sure where paid-version features start"
-        ]}
-      />
-      <div 
-        className="ag-theme-balaham"
-        style={{
-        height: '500px', 
-        // width: '600px'
-        }}
+    <div 
+      className="ag-theme-balaham"
+      style={{
+      height: '500px', 
+      // width: '600px'
+      }}
+    >
+      <AgGridReact 
+        columnDefs={agGridColumns}
+        rowData={data}
       >
-        <AgGridReact 
-          columnDefs={agGridColumns}
-          rowData={data}
-        >
-        </AgGridReact>
-      </div>
+      </AgGridReact>
     </div>
   );
 };
