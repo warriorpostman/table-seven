@@ -44,13 +44,52 @@ function App() {
         margin: '3rem' 
       }}>
         { gridType === 'react-data-grid' &&
-        <ReactDataGridDemo />
+        <div>
+          <Comparison
+            pros={[
+            "Built for inline-editing and selection (Excel-like features)",
+            "Can navigate by keyboard by default (focus on cell, etc)",
+            ]}
+            cons={[
+            "Uses divs for rows/cells",
+            "Requires bootstrap"
+            ]}
+          />
+          <ReactDataGridDemo />
+        </div>
         }
+
         { gridType === 'react-table' &&
-        <ReactTableDemo />
+        <div>
+          <Comparison 
+            pros={[
+            "Headless...you control table UI from the get-go",
+            "Uses custom hooks to supply data"
+            ]} 
+            cons={[
+            "A little tricky if you don't understand how the custom hooks work",
+            "Still in 'alpha' version",
+            "v7 complete rewrite from the previous < v6. You would have to refactor completely if you were using v6"
+            ]}
+          />
+          <ReactTableDemo />
+        </div>
         }
         { gridType === 'ag-grid' &&
-        <AgGridDemo />
+        <div>
+          <Comparison
+            pros={[
+            "Not sure yet....good docs? Nice website?",
+            ]}
+            cons={[
+            "Uses divs for rows/cells",
+            "Lots of HTML gets generateed...like A LOT.",
+            "It's not a pure React solution.",
+            "Free vs paid version.  Not sure where paid-version features start"
+            ]}
+          />
+          <AgGridDemo />
+        </div>
         }
 
       </div>
